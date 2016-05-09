@@ -1,0 +1,616 @@
+@font-face {
+    font-family: 'safregular';
+    src: url('../fonts/saf-webfont.eot');
+    src: url('../fonts/saf-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/saf-webfont.woff2') format('woff2'),
+         url('../fonts/saf-webfont.woff') format('woff'),
+         url('../fonts/saf-webfont.ttf') format('truetype'),
+         url('../fonts/saf-webfont.svg#safregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body{
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height:140vh;
+    width: 100% ;
+	background: rgba(0,143,55,1);
+	background: -moz-linear-gradient(left, rgba(0,143,55,1) 0%, rgba(0,143,55,1) 49%, rgba(0,116,179,1) 50%, rgba(0,116,179,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,143,55,1)), color-stop(49%, rgba(0,143,55,1)), color-stop(50%, rgba(0,116,179,1)), color-stop(100%, rgba(0,116,179,1)));
+	background: -webkit-linear-gradient(left, rgba(0,143,55,1) 0%, rgba(0,143,55,1) 49%, rgba(0,116,179,1) 50%, rgba(0,116,179,1) 100%);
+	background: -o-linear-gradient(left, rgba(0,143,55,1) 0%, rgba(0,143,55,1) 49%, rgba(0,116,179,1) 50%, rgba(0,116,179,1) 100%);
+	background: -ms-linear-gradient(left, rgba(0,143,55,1) 0%, rgba(0,143,55,1) 49%, rgba(0,116,179,1) 50%, rgba(0,116,179,1) 100%);
+	background: linear-gradient(to right, rgba(0,143,55,1) 0%, rgba(0,143,55,1) 49%, rgba(0,116,179,1) 50%, rgba(0,116,179,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008f37', endColorstr='#0074b3', GradientType=1 );
+    // @include desde (web){
+	   //  background: url(../img/fondo.jpg) no-repeat center top/130%;
+	   //  overflow-x: hidden;
+	   //  width: 100%;
+	   //  height: 100%;
+    // }
+    @include desde (web){
+      background: #372426 url(../img/bg-table.jpg) repeat-x center -59px;
+      overflow-x: hidden;
+      width: 100%;
+      height: 100%;
+    }
+    // @include desde (ze){
+    // 	 background: url(../img/fondo.jpg) no-repeat center top/115%;
+    // }
+    // @include desde (hd){
+    // 	 background: url(../img/fondo.jpg) no-repeat center top/100%;
+    // }
+}
+
+header.semana{
+	display: block;
+  margin: 40px auto 0 auto;
+	p{
+		background: $amar;
+		color:$blanco;
+		text-align: center;
+		font-size: 1em;
+		text-transform: uppercase;
+		padding:8px;
+		margin-bottom: 1em;
+	}
+	@include desde (web){
+		display: none;
+	}
+}
+
+header.mobile{
+	display: block;
+	width: 70%;
+	margin: 0 auto;
+	@include desde (tablet){
+		width: 40%;
+	}
+	@include desde (web){
+		display: none;
+	}
+}
+header{
+  @include desde (web){
+    height: 186px;
+  }
+
+	.logo{
+	    width: 80%;
+	    margin: 14px auto 0 auto;
+	    text-align: center;
+	    display: block;
+	    @include desde (tablet){
+	    	width: 55%;
+	    }
+		@include desde (web){
+			width: 56%;
+			margin-top: 7px;
+			margin-left: 120px;
+		}
+		@include desde (ze){
+			margin-left: 160px;
+		}
+		@include desde (hd){
+			margin-left: 162px;
+		}
+	}
+//menu neuveo
+
+a#pull {
+    display: none;
+
+}
+nav {
+    height: auto;
+    width: 100%;
+    background: $verde_oscuro;
+    position: relative;
+    //border-bottom: solid 1px #DDD;
+    @include desde (web){
+      background: transparent;
+    }
+}
+
+nav ul {
+    padding: 0;
+    //margin: 0 auto;
+    //width: 600px;
+    height: auto;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+    float: left;
+}
+
+nav a {
+    color: #FFF;
+    display: inline-block;
+    //width: 100px;
+    margin-right: 2em;
+    text-align: center;
+    line-height: 40px;
+}
+
+nav li a {
+    //border-right: 1px solid #576979;
+    font-family: 'safregular';
+}
+
+nav li:last-child a {
+    border-right: 0;
+}
+
+nav a:hover, nav a:active {
+    // background-color: $amar;
+    // border-bottom:$amar;
+    color:$blanco;
+    @include desde (web){
+      color:$amar;
+    }
+
+}
+@media only screen and (max-width : 768px) {
+    nav {
+        border-bottom: 0;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    nav ul {
+        display: none;
+        height: auto;
+        //width: 100%;
+    }
+
+    nav li {
+        width: 50%;
+        float: left;
+        position: relative;
+    }
+
+    nav a {
+        text-align: left;
+        width: 100%;
+        text-indent: 25px;
+        text-align: center;
+    }
+
+    nav a#pull {
+        display: block;
+        background-color: $verde_oscuro;
+        width: 100%;
+        position: relative;
+    }
+
+    nav a#pull:after {
+        content:"";
+        background: url('../img/nav-icon.png') no-repeat;
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        position: absolute;
+        right: 15px;
+        top: 10px;
+    }
+}
+
+}//header
+
+//sections
+
+section.indexW{
+  position: relative;
+  
+  img.clave{
+    display: none;
+    @include desde (web){
+      display: block;      
+    }
+
+  }
+  .fecha{
+    display:none;
+    @include desde (web){
+      display: block;
+      position: absolute;
+      top: -32px;
+      right: 85px;
+      p{
+        background: $amar;
+        color: $blanco;
+        padding: 5px;
+        width: 100%;
+        font-family: 'safregular';
+        font-size: 1.2em;
+      }
+    }
+    @include desde (tri){
+      right: 175px;
+    }
+    @include desde (ze){
+      top: -32px;
+      right: 215px;
+    }
+  }
+  .pizarra{
+    display: none;
+    @include desde (web){
+      position: absolute;
+      right: 0;
+      top: 70px;
+      width: 62%;
+      display: block;
+    }
+    @include desde (tri){
+      top: 45px;
+    }
+    @include desde (ze){
+      top:40px;
+    }
+    @include desde (hd){
+      top: 50px;
+    }
+  }
+  h2{
+    color:$blanco;
+    font-family: 'safregular';
+    font-size: 1.2em;
+    width: 81%;
+    margin: 1em auto;
+    text-align: center;
+    @include desde (web){
+      position: absolute;
+      right: 96px;
+      top: 100px;
+      width: 40%;
+      font-size: 1.5em;
+      text-align: center;
+    }
+    @include desde (tri){
+      right: 121px;
+      top: 150px;
+    }
+    @include desde (ze){
+      right: 187px;
+      top: 140px;
+      width: 36%;
+    }
+    @include desde (hd){
+      right: 184px;
+      width: 38%;
+      top: 140px;
+    }
+  }
+  .giftcardsM{
+    width: 65%;
+    margin: 0 auto;
+    @include desde (web){
+      display: none;
+    }
+  }
+  .giftcardsW{
+    display: none;
+    @include desde (web){
+      position: absolute;
+      width: 100%;
+      top: 310px;
+      right: -430px;
+      display: block;
+    }
+    @include desde (hd){
+      top: 327px;
+      right: -560px;
+    }
+    @include desde (tri){
+      top: 340px;
+      right: -550px;
+    }
+    @include desde (ze){
+      top: 330px;
+      right: -560px;
+    }
+    .giftW{
+      float:left;
+      width: 18%;
+    }
+  }
+  .info-semana{
+    display: none;
+    @include desde (web){
+      position: absolute;
+      bottom: -110px;
+      left: 120px;
+      display: block;
+    }
+  }
+  .huincha-premios{
+    display: none;
+    
+    @include desde (web){
+      position: absolute;
+      bottom: -170px;
+      right: 10px;
+      display: block;
+    }
+    @include desde (tri){
+      bottom: -110px;
+      right: 27px;
+    }
+    @include desde (ze){
+      bottom: -110px;
+      right: 70px;
+    }
+    @include desde (hd){
+      bottom: -110px;
+      right: 105px;
+    }
+  }
+//premios
+
+  .premios-caja{
+    position: static;
+    @include desde (tablet){
+      width: 55%;
+      margin: 0 auto;
+    }
+    @include desde (web){
+      position: absolute;
+      top: 80px;
+      width: 40%;
+      right: 94px;
+    }
+    @include desde (tri){
+      right: 118px;
+    }
+    @include desde (ze){
+      right: 132px;
+    }
+    @include desde (hd){
+      right: 155px;
+      width: 39%;
+    }
+
+    h1{
+      font-family: 'safregular';
+      color:$blanco;
+      text-align: center;
+    }
+      p{
+        font-size: 0.8em;
+        text-align: left;
+        color:$blanco;
+        width: 80%;
+        margin: 1em auto;
+        @include desde (tablet){
+          width: 100%;
+          font-size: 1em;
+        }
+        @include desde (web){
+          width: 100%;
+          font-size: 0.8em;
+        }
+        @include desde (tri){
+          font-size: 0.9em;
+        }
+        & span{
+          width: 100%;
+          display: block;
+          font-weight: bold;
+        }
+      }
+
+      p.sorteos{
+        font-family: 'safregular';
+        font-size: 1.4em;
+        text-align: center;
+        @include desde (web){
+          width: 89%;
+          margin-left: 19px;
+        }
+      }
+
+      a.verbases{
+        background: $amar;
+        text-align: center;
+        color:$blanco;
+        font-family: 'safregular';
+        padding:8px 14px;
+        display: block;
+        margin: 0 auto;
+        transition: .3s all;
+        cursor: pointer;
+        width: 40%;
+        margin-bottom: 2em;
+        @include desde (web){
+          background: $azul_logo;
+        }
+        &:hover{
+          background: $amar;
+          @include desde (web){
+            background: $amar;
+          }
+        }
+      }
+
+      .tablaganadores{
+          height: 280px;
+          @include desde (web){
+            height: 210px;
+            overflow-x: scroll;
+          }
+          @include desde (tri){
+            height: 250px;
+          }
+          @include desde (ze){
+            width: 91%;
+          }
+         .pure-table {
+                  /* Remove spacing between table cells (from Normalize.css) */
+                  border-collapse: collapse;
+                  border-spacing: 0;
+                  empty-cells: show;
+                  border: 1px solid #cbcbcb;
+                  width: 100%;
+              }
+
+              .pure-table caption {
+                  color: #000;
+                  font: italic 85%/1 arial, sans-serif;
+                  padding: 1em 0;
+                  text-align: center;
+              }
+
+              .pure-table td,
+              .pure-table th {
+                  border-left: 1px solid #cbcbcb;/*  inner column border */
+                  border-width: 0 0 0 1px;
+                  font-size: inherit;
+                  margin: 0;
+                  overflow: visible; /*to make ths where the title is really long work*/
+                  padding: 0.5em 1em; /* cell padding */
+              }
+
+              /* Consider removing this next declaration block, as it causes problems when
+              there's a rowspan on the first cell. Case added to the tests. issue#432 */
+              .pure-table td:first-child,
+              .pure-table th:first-child {
+                  border-left-width: 0;
+              }
+
+              .pure-table thead {
+                  background-color: $blanco;
+                  color: #000;
+                  text-align: center;
+                  vertical-align: bottom;
+                  font-size:0.8em;
+              }
+
+              /*
+              striping:
+                 even - #fff (white)
+                 odd  - #f2f2f2 (light gray)
+              */
+              .pure-table td {
+                  background-color: $amar;
+                  font-size:0.8em;
+                  text-align:center;
+              }
+              .pure-table-odd td {
+                  background-color: $azul_logo;
+                  font-size:0.8em;
+                  text-align:center;
+              }
+
+              /* nth-child selector for modern browsers */
+              .pure-table-striped tr:nth-child(2n-1) td {
+                  background-color: #f2f2f2;
+              }
+
+              /* BORDERED TABLES */
+              .pure-table-bordered td {
+                  border-bottom: 1px solid #cbcbcb;
+              }
+              .pure-table-bordered tbody > tr:last-child > td {
+                  border-bottom-width: 0;
+              }
+
+
+              /* HORIZONTAL BORDERED TABLES */
+
+              .pure-table-horizontal td,
+              .pure-table-horizontal th {
+                  border-width: 0 0 1px 0;
+                  border-bottom: 1px solid $azul_logo;
+              }
+              .pure-table-horizontal tbody > tr:last-child > td {
+                  border-bottom-width: 0;
+              }
+        form.contact-G{
+          width: 100%;
+          padding:5px;
+          background: $blanco;
+          width: 100%;
+          @include desde (tablet){
+            width: 80%;
+            margin: 0 auto;
+          }
+          @include desde (web){
+            background: transparent;
+            width: 100%;
+          }
+          input[type="text"],
+          input[type="mail"]{
+            width: 100%;
+            padding:5px;
+            background: transparent;
+            border:1px solid $amar;
+            margin-bottom: 8px;
+            color:$blanco;
+            @include desde (web){
+              margin-bottom: 3px;
+              border:1px solid $blanco;
+            }
+          }
+          textarea{
+            width: 100%;
+            height: 70px;
+            padding:5px;
+            color:$blanco;
+            background: transparent;
+            border:1px solid $amar;
+            @include desde (web){
+              border:1px solid $blanco;
+            }
+            @include desde (tri){
+              height: 125px;
+            }
+          }
+          input[type="submit"]{
+            width: 100%;
+            background: $amar;
+            font-family: 'safregular';
+            cursor:pointer;
+            color:$blanco;
+            border: none;
+            font-size: 1em;
+            padding: 8px;
+            @include desde (web){
+              padding: 0;
+            }
+          }
+        }
+
+      }//fin tablaganadores
+     
+  }
+
+.ayuda{
+  display: block;
+  @include desde (web){
+    margin-top: 45px;
+    display: block;
+    @include desde (hd){
+      right: 172px;
+    }
+  }
+}
+
+
+}//fin .sectionindexW
+
+footer.mesa{
+  display: none;
+  @include desde (web){
+    display: block;
+  background: url(../img/mesa.jpg) repeat-x;
+  height: 325px;
+  }
+}

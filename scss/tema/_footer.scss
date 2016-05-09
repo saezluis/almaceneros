@@ -1,0 +1,87 @@
+section.foot{
+	display:none;
+	width: 100%;
+	 height: auto; 
+	 background: #fff;
+	 position: absolute;
+	 bottom:0;
+	 padding:4px;
+	 a.link_web{
+	 	float:left;
+	 	display: block;
+	 	width: 15%;
+	 	margin-right: 1em;
+	 	margin-top: 6px;
+	 	@include desde (ze){
+	 		width: 10%;
+
+	 	}
+	 }
+	 .itemSocial{
+ 	    width: 100%;
+		margin-top: 7px;
+		 p.tfoot {
+		 	font-size: 0.7em;
+		 	float:left;
+		 	margin-left: 74%;
+		 	@include desde (ze){
+    			margin-left: 82%;
+		 	}
+		 }
+
+		 .fc{
+		    float: left;
+		    width: 3%;
+		    margin-right: .25em;
+		    margin-left: .25em;
+		    display: block;
+		 }
+	 }
+}
+
+.marcas{
+	display:block;
+	background: $blanco;
+	padding: 5px;
+	@include desde (web){
+		display: block;
+		width: 100%;
+
+		background: $blanco;
+	}
+	.logos_foot{
+	    width: 30%;
+	    display: block;
+	    float: left;
+	    margin-right: 1em;
+	    @include desde (tablet){
+	    	width: 20%;
+	    }
+		@include desde (web){
+			float:left;
+			width: 15%;
+			margin-right: 1em;
+		}
+	}
+	.facebook{
+		width: 100%;
+		p{
+			font-size: 0.5em;
+			text-align: right;
+			margin-top: 5px;
+
+			a{
+				float:right;
+				width: 8%;
+				margin-right: 0.5em;
+				margin-left: 0.5em;
+				@include desde (tablet){
+					width: 5%;
+				}
+				@include desde (web){
+					width: 3%;
+				}
+			}
+		}	
+	}
+}

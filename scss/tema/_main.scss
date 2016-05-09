@@ -1,0 +1,529 @@
+section.index{
+	width: 100%;
+	position: relative;
+	h2{
+		color:$blanco;
+		font-family: 'safregular';
+		font-size:0.9em;
+		letter-spacing:1px;
+		@include desde (tablet){
+			width: 60%;
+			margin: 1em auto;
+			font-size: 1em;
+		}
+		@include desde (web){
+			position: absolute;
+			right: 112px;
+			font-size: 1.2em;
+			width: 31%;
+			top: 160px;
+			text-align: center;
+		}
+		@include desde (ze){
+			right: 135px;
+			top: 190px;
+		}
+		@include desde (hd){
+			right: 156px;
+			top: 148px;
+		}
+	}
+	.giftcards{
+		display: none;
+		@include desde (web){
+			width: 100%;
+		    position: absolute;
+			right: -500px;
+			top: 329px;
+			display: block;
+		}
+		@include desde (ze){
+			right: -500px;
+			top: 349px;
+		}
+	    @include desde (hd){
+		    right: -530px;
+		    top: 295px;
+	    }
+		.gift{
+			float:left;
+			width: 15%;
+			@include desde (ze){
+				width: 20%;
+			}
+			@include desde (hd){
+				width: 18%;
+			}
+		}
+	}//fin .giftcards
+
+
+	.giftcardsM{
+		width: 100%;
+		display: block;
+		@include desde (web){
+			display:none;
+		}
+		.giftM{
+			width: 70%;
+			margin: 0 auto;
+			@include desde (tablet){
+				width: 41%;
+			}
+		}
+	}
+
+
+	.semana{
+		display: none;
+		@include desde (web){
+			position: absolute;
+		    top: 380px;
+		    left: 120px;
+		    width: 25%;
+		    display: block;
+		}
+	    @include desde (ze){
+			top: 470px;
+			left: 120px;
+			width: 21%;
+	    }
+	    @include desde (hd){
+			top: 410px;
+			left: 170px;
+			width: 21%;
+	    }
+	}
+	.premios{
+		display: none;
+		@include desde (web){
+			position: absolute;
+			top: 430px;
+			right: 0px;
+			width: 55%;
+			display: block;
+		}
+		@include desde (ze){
+			top: 505px;
+			right: 0px;
+			width: 55%;
+		}
+		@include desde (hd){
+		    top: 438px;
+		    right: 0px;
+		    width: 55%;
+		}
+	}
+}//fin .index
+
+section.premios{
+	width: 100%;
+	position: relative;
+	.caja-premios{
+		position: static;
+		width: 100%;
+		margin-top: 1em;
+		@include desde (tablet){
+		    width: 60%;
+		    margin: 0 auto;
+		}
+		@include desde (web){
+			width: 35%;
+			position: absolute;
+			top: 140px;
+			right: 85px;
+		}
+		@include desde (ze){
+			top: 172px;
+			right: 90px;
+		}
+		@include desde (hd){
+			top: 132px;
+			right: 147px;
+			width: 32%;
+		}
+		h1{
+			font-family: 'safregular';
+			color:$blanco;
+			font-size: 1.5em;
+			text-align: center;
+			@include desde (web){
+				text-align: center;
+				margin: 0;
+				font-size: 1.2em;
+			}
+			@include desde (ze){
+				font-size: 1.5em;
+			}
+		}
+		p{
+			color:$blanco;
+			font-size: 1em;
+			@include desde (web){
+			font-size: 0.8em;
+			margin-bottom: 0;
+			}
+			@include desde (ze){
+				margin-bottom: 5px;
+				font-size: 0.9em;
+			}
+			@include desde (hd){
+				font-size: 0.8em;
+			}
+			& span{
+				width: 100%;
+				display: block;
+				font-size: 1.1em;
+			}
+		}
+	}
+	.semanaM{
+		background: $amar;
+		color:$blanco;
+		text-align: center;
+		padding:8px;
+		display: block;
+		margin-top: 1em;
+		text-transform: uppercase;
+		-webkit-box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);
+		-moz-box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);
+		box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);
+		@include desde (tablet){
+			width: 60%;
+			margin: 1em auto;
+		}
+		@include desde (web){
+			display: none;
+		}
+	}
+	.semana{
+		display: none;
+		@include desde (web){
+			position: absolute;
+		    top: 380px;
+		    left: 120px;
+		    width: 25%;
+		    display: block;
+		}
+	    @include desde (ze){
+			top: 470px;
+			left: 120px;
+			width: 21%;
+	    }
+	    @include desde (hd){
+			top: 410px;
+			left: 170px;
+			width: 21%;
+	    }
+	}
+	.premios{
+		display: none;
+		@include desde (web){
+			position: absolute;
+			top: 430px;
+			right: 0px;
+			width: 55%;
+			display: block;
+		}
+		@include desde (ze){
+			top: 505px;
+			right: 0px;
+			width: 55%;
+		}
+		@include desde (hd){
+		    top: 438px;
+		    right: 0px;
+		    width: 55%;
+		}
+	}
+}
+
+section.ganadores{
+		@include desde (web){
+			width: 100%;
+			position: absolute;
+			right: 104px;
+			top: 278px;
+		}
+		@include desde (ze){
+			width: 30%;
+			position: absolute;
+			right: 201px;
+			top: 326px;
+		}
+		@include desde (hd){
+		    width: 26%;
+		    position: absolute;
+		    right: 270px;
+		    top: 296px;
+		}
+		.caja-ganadores{
+			position: static;
+			width: 100%;
+			height: auto;
+			@include desde (tablet){
+			    width: 60%;
+			    margin: 0 auto;
+			}
+			@include desde (web){
+				width: 34%;
+				height: 240px;
+				overflow-y: scroll;
+				position: absolute;
+				right: 0;
+			}
+			@include desde (ze){
+				width: 100%;
+				height: 280px;
+			}
+			@include desde (hd){
+    			height: 252px;
+			}
+		    h1{
+			    color:$blanco;
+				font-family: 'safregular';
+				font-size: 1.2em;
+				text-align: center;
+		    }
+			.pure-table {
+			    /* Remove spacing between table cells (from Normalize.css) */
+			    border-collapse: collapse;
+			    border-spacing: 0;
+			    empty-cells: show;
+			    border: 1px solid #cbcbcb;
+			    width: 100%;
+			}
+
+			.pure-table caption {
+			    color: #000;
+			    font: italic 85%/1 arial, sans-serif;
+			    padding: 1em 0;
+			    text-align: center;
+			}
+
+			.pure-table td,
+			.pure-table th {
+			    border-left: 1px solid #cbcbcb;/*  inner column border */
+			    border-width: 0 0 0 1px;
+			    font-size: inherit;
+			    margin: 0;
+			    overflow: visible; /*to make ths where the title is really long work*/
+			    padding: 0.5em 1em; /* cell padding */
+			}
+
+			/* Consider removing this next declaration block, as it causes problems when
+			there's a rowspan on the first cell. Case added to the tests. issue#432 */
+			.pure-table td:first-child,
+			.pure-table th:first-child {
+			    border-left-width: 0;
+			}
+
+			.pure-table thead {
+			    background-color: $blanco;
+			    color: #000;
+			    text-align: center;
+			    vertical-align: bottom;
+			    font-size:0.8em;
+			}
+
+			/*
+			striping:
+			   even - #fff (white)
+			   odd  - #f2f2f2 (light gray)
+			*/
+			.pure-table td {
+			    background-color: $amar;
+			    font-size:0.8em;
+			    text-align:center;
+			}
+			.pure-table-odd td {
+			    background-color: $azul_logo;
+			    font-size:0.8em;
+			    text-align:center;
+			}
+
+			/* nth-child selector for modern browsers */
+			.pure-table-striped tr:nth-child(2n-1) td {
+			    background-color: #f2f2f2;
+			}
+
+			/* BORDERED TABLES */
+			.pure-table-bordered td {
+			    border-bottom: 1px solid #cbcbcb;
+			}
+			.pure-table-bordered tbody > tr:last-child > td {
+			    border-bottom-width: 0;
+			}
+
+
+			/* HORIZONTAL BORDERED TABLES */
+
+			.pure-table-horizontal td,
+			.pure-table-horizontal th {
+			    border-width: 0 0 1px 0;
+			    border-bottom: 1px solid $azul_logo;
+			}
+			.pure-table-horizontal tbody > tr:last-child > td {
+			    border-bottom-width: 0;
+			}
+		}
+	.semanaG{
+		display: none;
+		@include desde (web){
+			position: absolute;
+			top: 270px;
+			left: 230px;
+			width: 25%;
+			display: block;
+		}
+	    @include desde (ze){
+			top: 316px;
+			left: -450px;
+			width: 60%;
+	    }
+	    @include desde (hd){
+			top: 280px;
+			left: -410px;
+			width: 65%;
+	    }
+	}
+	.premiosG{
+		display: none;
+		@include desde (web){
+			position: absolute;
+			top: 290px;
+			right: -80px;
+			width: 55%;
+			display: block;
+		}
+		@include desde (ze){
+			top: 340px;
+			right: -75px;
+			width: 140%;
+		}
+		@include desde (hd){
+			top: 298px;
+			right: -90px;
+			width: 155%;
+		}
+	}
+}//fin
+
+section.contacto{
+	width: 100%;
+	position: relative;
+	.caja-contacto{
+		position: static;
+		width: 100%;
+		@include desde (tablet){
+			width: 60%;
+			margin: 0 auto;
+		}
+		@include desde (web){
+			width: 35%;
+			position: absolute;
+			top: 140px;
+			right: 88px;
+		}
+		@include desde (ze){
+			top: 160px;
+    		right: 105px;
+		}
+		@include desde (hd){
+			top: 124px;
+			right: 157px;
+			width: 31%;
+		}
+		h1{
+			color:$blanco;
+			font-family: 'safregular';
+			font-size: 1.2em;
+			text-align: center;
+		}
+		form.contact{
+			width: 100%;
+			height: auto;
+			input[type="text"],
+			input[type="mail"]{
+				width: 100%;
+				padding:5px;
+				background: transparent;
+				border:1px solid $blanco;
+				margin-bottom: 3px;
+				color:$blanco;
+			}
+			textarea{
+				height: 70px;
+				width: 100%;
+				background: transparent;
+				border:1px solid $blanco;
+				color:$blanco;
+				padding:5px;
+				@include desde (ze){
+					height: 110px;
+				}
+				@include desde (hd){
+					height: 86px;
+				}
+			}
+			input[type="submit"]{
+				width: 100%;
+				background: $amar;
+				text-align: center;
+				color:$blanco;
+				border:none;
+				font-size: 1em;
+				font-family: 'safregular';
+				transition: .3s all;
+				cursor:pointer;
+				&:hover{
+					background: $azul_logo;
+				}
+				@include desde (ze){
+					margin-top:5px;
+				}
+			}
+		}
+	}//fin .caja-contacto
+	//weitas
+	.semana{
+		display: none;
+		@include desde (web){
+			position: absolute;
+		    top: 380px;
+		    left: 120px;
+		    width: 25%;
+		    display: block;
+		}
+	    @include desde (ze){
+			top: 470px;
+			left: 120px;
+			width: 21%;
+	    }
+	    @include desde (hd){
+			top: 410px;
+			left: 170px;
+			width: 21%;
+	    }
+	}
+	.premios{
+		display:none;
+		@include desde (web){
+			position: absolute;
+			top: 430px;
+			right: 0px;
+			width: 55%;
+			display: block;
+		}
+		@include desde (ze){
+			top: 505px;
+			right: 0px;
+			width: 55%;
+		}
+		@include desde (hd){
+		    top: 438px;
+		    right: 0px;
+		    width: 55%;
+		}
+	}
+}
